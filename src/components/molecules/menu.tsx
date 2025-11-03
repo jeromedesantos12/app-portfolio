@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import navbars from "@/data/navbars.json";
+import menus from "@/data/menus.json";
 import Link from "next/link";
 
 export function Menu({ isActive }: { isActive: boolean }) {
@@ -13,7 +13,7 @@ export function Menu({ isActive }: { isActive: boolean }) {
       )}
     >
       <ul className="md:hidden flex flex-col gap-2 text-sm w-full">
-        {navbars.menus.map((menu) => (
+        {menus.map((menu) => (
           <Link
             href={`${menu.path}`}
             key={menu.id}

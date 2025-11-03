@@ -1,12 +1,11 @@
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Particles } from "@/components/ui/particles";
 import { motion } from "framer-motion";
-import apps from "@/data/apps.json";
 import heros from "@/data/heros.json";
-import profiles from "@/data/profiles.json";
 import Link from "next/link";
 import Image from "next/image";
+import { DynamicIcon } from "@/components/atoms/dynamic-icon";
+import { Suspense } from "react";
 
 export function Hero() {
   return (
@@ -34,7 +33,7 @@ export function Hero() {
           className="relative w-full md:w-[400px] h-64 sm:h-80 md:h-96"
         >
           <Image
-            src={`/${profiles.image}`}
+            src={`/${heros.image}`}
             alt="Profile preview"
             fill
             className="object-cover object-top rounded-2xl shadow-lg"
@@ -51,7 +50,6 @@ export function Hero() {
           >
             {heros.title}
           </motion.h1>
-
           <div className="flex flex-col -mt-5 sm:flex-row gap-3 ">
             <motion.h2
               initial={{ opacity: 0, translateY: "100%" }}
@@ -63,7 +61,6 @@ export function Hero() {
               {heros.caption}
             </motion.h2>
           </div>
-
           <motion.p
             initial={{ opacity: 0, translateY: "100%" }}
             whileInView={{ opacity: 1, translateY: 0 }}
@@ -73,7 +70,6 @@ export function Hero() {
           >
             {heros.description}
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, translateY: "100%" }}
             whileInView={{ opacity: 1, translateY: 0 }}
@@ -81,20 +77,35 @@ export function Hero() {
             viewport={{ once: true, amount: 0.4 }}
             className="flex gap-4"
           >
-            <Link href={apps.link} target="_blank">
-              <Button className="cursor-pointer flex gap-2 items-center justify-center px-6 py-3 shadow-md transform hover:-translate-y-1 transition-transform p-4">
-                <p>Contact Us</p>
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-            </Link>
-            <Link href="#steps">
-              <Button
-                variant="outline"
-                className="cursor-pointer flex gap-2 items-center justify-center px-6 py-3  shadow-md transform hover:-translate-y-1 transition-transform"
-              >
-                Download CV
-              </Button>
-            </Link>
+            {heros.buttons.map((button) => (
+              <Link key={button.id} href={button.link} target="_blank">
+                <Button
+                  variant={
+                    button.variant as
+                      | "link"
+                      | "outline"
+                      | "default"
+                      | "destructive"
+                      | "secondary"
+                      | "ghost"
+                      | null
+                      | undefined
+                  }
+                  className="cursor-pointer flex gap-2 items-center justify-center px-6 py-3 shadow-md transform hover:-translate-y-1 transition-transform p-4"
+                >
+                  <p>{button.name}</p>
+                  {button.icon && (
+                    // !!! INI YANG HARUS DITAMBAHKAN !!!
+                    <Suspense fallback={<div className="w-5 h-5" />}>
+                      <DynamicIcon
+                        name={button.icon as "home"} // name={button.icon as keyof typeof dynamicIconImports}
+                        className="w-5 h-5"
+                      />
+                    </Suspense>
+                  )}
+                </Button>
+              </Link>
+            ))}
           </motion.div>
         </div>
       </div>

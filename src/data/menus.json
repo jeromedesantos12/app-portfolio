@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "path": "#home"
+  },
+  {
+    "id": 2,
+    "name": "Tech Stack",
+    "path": "#techstack"
+  },
+  {
+    "id": 3,
+    "name": "Experience",
+    "path": "#experience"
+  },
+  {
+    "id": 4,
+    "name": "Projects",
+    "path": "#projects"
+  }
+]

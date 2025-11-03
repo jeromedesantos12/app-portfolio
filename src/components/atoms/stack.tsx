@@ -1,4 +1,4 @@
-import { LogoLoop } from "@/components/ui/logoloop";
+import { LogoLoop } from "@/components/ui/logo-loop";
 import {
   SiReact,
   SiNextdotjs,

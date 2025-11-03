@@ -320,7 +320,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
             width={(item as any).width}
             height={(item as any).height}
             alt={(item as any).alt ?? ""}
-            title={(item as unknown).title}
+            title={(item as any).title}
             loading="lazy"
             decoding="async"
             draggable={false}
@@ -439,3 +439,5 @@ export const LogoLoop = React.memo<LogoLoopProps>(
 );
 
 LogoLoop.displayName = "LogoLoop";
+
+export default LogoLoop;

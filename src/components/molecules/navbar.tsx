@@ -4,7 +4,7 @@ import { ChevronRight, Code, Menu, Moon, Sun, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import navbars from "@/data/navbars.json";
+import menus from "@/data/menus.json";
 import apps from "@/data/apps.json";
 import Link from "next/link";
 
@@ -53,7 +53,7 @@ export function Navbar({
           </div>
         </div>
         <ul className="md:flex gap-5 text-sm hidden">
-          {navbars.menus.map((menu) => (
+          {menus.map((menu) => (
             <Link
               href={`${menu.path}`}
               key={menu.id}

@@ -3,5 +3,21 @@
   "image": "profile.jpg",
   "title": "Hallo! Ich heiße Jeremy",
   "caption": "Fullstack Dev | MERN Enjoyer",
-  "description": "a passionate Web Programmer who enjoys building applications using the MERN stack (MongoDB, Express.js, React, Node.js)."
+  "description": "a passionate Web Programmer who enjoys building applications using the MERN stack (MongoDB, Express.js, React, Node.js).",
+  "buttons": [
+    {
+      "id": 1,
+      "icon": "arrow-right",
+      "name": "Contact Us",
+      "variant": "default",
+      "link": "https://wa.me/62895704298578e"
+    },
+    {
+      "id": 2,
+      "icon": null,
+      "name": "Download CV",
+      "variant": "outline",
+      "link": "#"
+    }
+  ]
 }
