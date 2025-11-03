@@ -1,35 +1,29 @@
-{
-  "id": "projects",
-  "title": "My Projects",
-  "tag": "Portfolio",
-  "description": "Here are some of the projects I've worked on, showcasing my skills and passion for development.",
-  "projects": [
-    {
-      "id": 1,
-      "delay": 0,
-      "image": "/project-placeholders/project1.jpg",
-      "title": "Project Alpha",
-      "description": "A web application built with Next.js and Tailwind CSS, featuring a responsive design and dynamic content loading.",
-      "githubLink": "https://github.com/yourusername/project-alpha",
-      "websiteLink": "https://project-alpha.vercel.app"
-    },
-    {
-      "id": 2,
-      "delay": 0.1,
-      "image": "/project-placeholders/project2.jpg",
-      "title": "Project Beta",
-      "description": "A mobile-first e-commerce platform developed using React Native, integrated with a custom backend API.",
-      "githubLink": "https://github.com/yourusername/project-beta",
-      "websiteLink": "https://project-beta.netlify.app"
-    },
-    {
-      "id": 3,
-      "delay": 0.2,
-      "image": "/project-placeholders/project3.jpg",
-      "title": "Project Gamma",
-      "description": "A data visualization tool created with D3.js, showcasing interactive charts and real-time data updates.",
-      "githubLink": "https://github.com/yourusername/project-gamma",
-      "websiteLink": "https://project-gamma.vercel.app"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "delay": 0,
+    "image": "/project-placeholders/project1.jpg",
+    "title": "Project Alpha",
+    "description": "A web application built with Next.js and Tailwind CSS, featuring a responsive design and dynamic content loading.",
+    "githubLink": "https://github.com/yourusername/project-alpha",
+    "websiteLink": "https://project-alpha.vercel.app"
+  },
+  {
+    "id": 2,
+    "delay": 0.1,
+    "image": "/project-placeholders/project2.jpg",
+    "title": "Project Beta",
+    "description": "A mobile-first e-commerce platform developed using React Native, integrated with a custom backend API.",
+    "githubLink": "https://github.com/yourusername/project-beta",
+    "websiteLink": "https://project-beta.netlify.app"
+  },
+  {
+    "id": 3,
+    "delay": 0.2,
+    "image": "/project-placeholders/project3.jpg",
+    "title": "Project Gamma",
+    "description": "A data visualization tool created with D3.js, showcasing interactive charts and real-time data updates.",
+    "githubLink": "https://github.com/yourusername/project-gamma",
+    "websiteLink": "https://project-gamma.vercel.app"
+  }
+]

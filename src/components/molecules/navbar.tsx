@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import menus from "@/data/menus.json";
-import apps from "@/data/apps.json";
+import app from "@/data/app.json";
 import Link from "next/link";
 
 export function Navbar({
@@ -28,11 +28,11 @@ export function Navbar({
     <header className="fixed top-0 w-full bg-background flex justify-center z-30">
       <div className="w-full max-w-7xl flex justify-between items-center p-4">
         <Link
-          href={apps.link}
+          href={app.path}
           className="font-bold flex gap-2 items-center justify-center"
         >
           <Code className="duration-300" />
-          <p className="font-mono duration-300">{apps.title}</p>
+          <p className="font-mono duration-300">{app.title}</p>
         </Link>
 
         <div className="md:hidden flex items-center gap-5">
@@ -71,7 +71,7 @@ export function Navbar({
           >
             {currentTheme === "dark" ? <Sun /> : <Moon />}
           </Button>
-          <Link href={apps.link} target="_blank">
+          <Link href={app.contact} target="_blank">
             <Button className="cursor-pointer hover:scale-105 transition-transform flex gap-2 items-center justify-center">
               <p>Contact Us</p>
               <ChevronRight />

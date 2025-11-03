@@ -1,0 +1,7 @@
+{
+  "id": "home",
+  "image": "profile.jpg",
+  "title": "Hallo! Ich heiße Jeremy",
+  "caption": "Fullstack Dev | MERN Enjoyer",
+  "description": "a passionate Web Programmer who enjoys building applications using the MERN stack (MongoDB, Express.js, React, Node.js)."
+}

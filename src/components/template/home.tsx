@@ -4,9 +4,9 @@ import { Footer } from "@/components/molecules/footer";
 import { Hero } from "@/components/molecules/hero";
 import { Menu } from "@/components/molecules/menu";
 import { Navbar } from "@/components/molecules/navbar";
-import { TechStack } from "@/components/molecules/tech-stack";
+import { TechStack } from "@/components/molecules/techstack";
 import { useState } from "react";
-import { Projects } from "@/components/molecules/projects";
+import { Project } from "@/components/molecules/project";
 
 export function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -19,7 +19,7 @@ export function Home() {
       <Menu isActive={isActive} />
       <Hero />
       <TechStack />
-      <Projects />
+      <Project />
       <Footer />
     </div>
   );

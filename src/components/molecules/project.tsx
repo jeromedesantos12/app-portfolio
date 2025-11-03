@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import projects from "@/data/projects.json";
 import { Card } from "@/components/atoms/card";
+import project from "@/data/project.json";
+import projects from "@/data/projects.json";
 
-export function Projects() {
+export function Project() {
   return (
     <section
       className="pb-50 pt-40 px-5 flex flex-col gap-15 items-center"
-      id={projects.id}
+      id={project.id}
     >
       <div className="flex flex-col gap-5 max-w-6xl items-center text-center">
         <motion.span
@@ -16,7 +17,7 @@ export function Projects() {
           className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs font-medium uppercase tracking-wider text-muted-foreground shadow-sm backdrop-blur"
         >
           <span className="h-2 w-2 rounded-full bg-primary/80 animate-pulse" />
-          {projects.tag}
+          {project.id}
         </motion.span>
 
         <motion.h1
@@ -26,7 +27,7 @@ export function Projects() {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
         >
-          {projects.title}
+          {project.title}
         </motion.h1>
 
         <motion.p
@@ -36,11 +37,11 @@ export function Projects() {
           transition={{ duration: 0.5, delay: 0.05 }}
           className="max-w-2xl text-sm sm:text-base text-muted-foreground"
         >
-          {projects.description}
+          {project.description}
         </motion.p>
       </div>
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl px-4">
-        {projects.projects.map((project) => (
+        {projects.map((project) => (
           <Card key={project.id} {...project} />
         ))}
       </div>

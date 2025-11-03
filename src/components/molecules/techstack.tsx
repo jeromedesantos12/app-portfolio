@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Stack } from "@/components/atoms/stack";
+import techstack from "@/data/techstack.json";
 
 export function TechStack() {
   return (
     <section
-      id={"#techstack"}
-      className="relative flex flex-col items-center gap-12 py-20 px-6 overflow-hidden bg-accent"
+      id={techstack.id}
+      className="relative flex flex-col min-h-2/3 justify-center items-center gap-12 py-20 px-6 overflow-hidden bg-accent scroll-mt-40"
     >
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-16 -right-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
@@ -21,7 +22,7 @@ export function TechStack() {
           className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs font-medium uppercase tracking-wider text-muted-foreground shadow-sm backdrop-blur"
         >
           <span className="h-2 w-2 rounded-full bg-primary/80 animate-pulse" />
-          Tech Stack
+          {techstack.tag}
         </motion.span>
 
         <motion.h1
@@ -31,7 +32,7 @@ export function TechStack() {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
         >
-          Tools I Use Everyday
+          {techstack.title}
         </motion.h1>
 
         <motion.p
@@ -41,8 +42,7 @@ export function TechStack() {
           transition={{ duration: 0.5, delay: 0.05 }}
           className="max-w-2xl text-sm sm:text-base text-muted-foreground"
         >
-          From frontend frameworks to databases, here are the technologies I
-          rely on to build fast and reliable products.
+          {techstack.description}
         </motion.p>
       </div>
 
