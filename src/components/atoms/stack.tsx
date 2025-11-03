@@ -1,54 +1,61 @@
 import { LogoLoop } from "@/components/ui/logo-loop";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-} from "react-icons/si";
+import { DynamicSiIcon } from "./dynamic-si-icon";
 
 const techLogos = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
   {
-    node: <SiTypescript />,
+    name: "SiHtml5",
+    title: "HTML5",
+    href: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+  },
+  {
+    name: "SiCss3",
+    title: "CSS3",
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3",
+  },
+  {
+    name: "SiJavascript",
+    title: "JavaScript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "SiTypescript",
     title: "TypeScript",
     href: "https://www.typescriptlang.org",
   },
+  { name: "SiBootstrap", title: "Bootstrap", href: "https://getbootstrap.com" },
   {
-    node: <SiTailwindcss />,
+    name: "SiTailwindcss",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com",
   },
+  { name: "SiReact", title: "React", href: "https://react.dev" },
+  { name: "SiMysql", title: "MySQL", href: "https://www.mysql.com" },
+  {
+    name: "SiPostgresql",
+    title: "PostgreSQL",
+    href: "https://www.postgresql.org",
+  },
+  { name: "SiMongodb", title: "MongoDB", href: "https://www.mongodb.com" },
+  { name: "SiExpress", title: "Express", href: "https://expressjs.com" },
+  { name: "SiNodedotjs", title: "Node.js", href: "https://nodejs.org" },
+  { name: "SiDotnet", title: ".NET", href: "https://dotnet.microsoft.com" },
 ];
 
-// Alternative with image sources
-const imageLogos = [
-  {
-    src: "/logos/company1.png",
-    alt: "Company 1",
-    href: "https://company1.com",
-  },
-  {
-    src: "/logos/company2.png",
-    alt: "Company 2",
-    href: "https://company2.com",
-  },
-  {
-    src: "/logos/company3.png",
-    alt: "Company 3",
-    href: "https://company3.com",
-  },
-];
+const techLogosMapped = techLogos.map((tech) => ({
+  node: <DynamicSiIcon name={tech.name as any} />,
+  title: tech.title,
+  href: tech.href,
+}));
 
 export function Stack() {
   return (
     <div style={{ position: "relative", overflow: "hidden" }}>
       <LogoLoop
-        logos={techLogos}
-        speed={50}
+        logos={techLogosMapped}
+        speed={30}
         direction="right"
         logoHeight={48}
-        gap={40}
+        gap={60}
         pauseOnHover
         scaleOnHover
         fadeOut
