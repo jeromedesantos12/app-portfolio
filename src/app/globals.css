@@ -212,6 +212,18 @@
   }
 }
 
+.animate-logo-scroll {
+  display: inline-block;
+  will-change: transform;
+}
+.animate-logo-scroll:hover {
+  animation-play-state: paused;
+}
+
+.pause {
+  animation-play-state: paused;
+}
+
 .auth-button {
   background: linear-gradient(270deg, #007bff, #ff00aa, #ff3b3b);
   background-size: 600% 600%;

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Carousel } from "./carousel";
+import { LogoSlider } from "./slider";
 
 export function TechStack() {
   return (
@@ -20,7 +20,7 @@ export function TechStack() {
         </motion.h1>
       </div>
       <section id="tech-stack">
-        <Carousel />
+        <LogoSlider />
       </section>
     </section>
   );
