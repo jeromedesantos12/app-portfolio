@@ -5,7 +5,10 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer id={footers.id} className="bg-dark pt-10 pb-10">
+    <footer
+      id={footers.id}
+      className="bg-gradient-to-b from-background to-accent pt-16 pb-12"
+    >
       <div className="flex flex-wrap justify-center gap-2 mb-5">
         {footers.socials.map((social) => (
           <Social key={social.id} {...social} />
@@ -15,6 +18,7 @@ export function Footer() {
         initial={{ opacity: 0, translateY: "100%" }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.4 }}
         className="hover:text-secondary-light text-sm font-medium text-center transition duration-300 ease-in-out"
       >
         Made with &#9829; by {""}

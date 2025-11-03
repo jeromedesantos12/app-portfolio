@@ -4,7 +4,6 @@ import { Footer } from "@/components/molecules/footer";
 import { Hero } from "@/components/molecules/hero";
 import { Menu } from "@/components/molecules/menu";
 import { Navbar } from "@/components/molecules/navbar";
-import { Profile } from "@/components/molecules/profile";
 import { TechStack } from "@/components/molecules/techstack";
 import { useState } from "react";
 import { Projects } from "@/components/molecules/projects";

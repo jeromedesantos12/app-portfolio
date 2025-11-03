@@ -30,6 +30,7 @@ export function Hero() {
           initial={{ opacity: 0, translateX: "-100%" }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.4 }}
           className="relative w-full md:w-[400px] h-64 sm:h-80 md:h-96"
         >
           <Image
@@ -45,6 +46,7 @@ export function Hero() {
             initial={{ opacity: 0, translateY: "100%" }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.4 }}
             className="text-5xl font-extrabold leading-tight tracking-tight duration-300"
           >
             {heros.title}
@@ -55,6 +57,7 @@ export function Hero() {
               initial={{ opacity: 0, translateY: "100%" }}
               whileInView={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.4 }}
               className="text-3xl font-light text-muted-foreground duration-300"
             >
               {heros.caption}
@@ -65,7 +68,8 @@ export function Hero() {
             initial={{ opacity: 0, translateY: "100%" }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-lg text-muted-foreground max-w-lg duration-300"
+            viewport={{ once: true, amount: 0.4 }}
+            className="text-muted-foreground max-w-lg duration-300"
           >
             {heros.description}
           </motion.p>
@@ -74,6 +78,7 @@ export function Hero() {
             initial={{ opacity: 0, translateY: "100%" }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.4 }}
             className="flex gap-4"
           >
             <Link href={apps.link} target="_blank">

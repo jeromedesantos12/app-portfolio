@@ -1,70 +1,35 @@
 {
   "id": "projects",
   "title": "My Projects",
-  "users": [
+  "tag": "Portfolio",
+  "description": "Here are some of the projects I've worked on, showcasing my skills and passion for development.",
+  "projects": [
     {
       "id": 1,
       "delay": 0,
-      "src": "/users/muller.jpg",
-      "name": "Leonhardt Müller",
-      "dept": "Owner • Müller Handelszentrum",
-      "msg": "Ngorderin Bot membantu saya menghemat lebih dari tiga jam kerja setiap hari! Semua laporan stok langsung dikirim otomatis ke WhatsApp, benar-benar efisien."
+      "image": "/project-placeholders/project1.jpg",
+      "title": "Project Alpha",
+      "description": "A web application built with Next.js and Tailwind CSS, featuring a responsive design and dynamic content loading.",
+      "githubLink": "https://github.com/yourusername/project-alpha",
+      "websiteLink": "https://project-alpha.vercel.app"
     },
     {
       "id": 2,
       "delay": 0.1,
-      "src": "/users/becker.jpg",
-      "name": "Ansel Becker",
-      "dept": "Data Analyst • Becker Consulting",
-      "msg": "Integrasi ke Google Sheets-nya sangat mulus! Sekarang tim saya bisa memantau stok secara real-time tanpa harus buka laptop."
+      "image": "/project-placeholders/project2.jpg",
+      "title": "Project Beta",
+      "description": "A mobile-first e-commerce platform developed using React Native, integrated with a custom backend API.",
+      "githubLink": "https://github.com/yourusername/project-beta",
+      "websiteLink": "https://project-beta.netlify.app"
     },
     {
       "id": 3,
       "delay": 0.2,
-      "src": "/users/schneider.jpg",
-      "name": "Tobias Schneider",
-      "dept": "Warehouse Supervisor • Schneider Logistics",
-      "msg": "Fitur notifikasi otomatisnya luar biasa! Begitu stok menipis, saya langsung dapat pesan WhatsApp tanpa perlu cek manual."
-    },
-    {
-      "id": 4,
-      "delay": 0.3,
-      "src": "/users/vogel.jpg",
-      "name": "Markus Vogel",
-      "dept": "Regional Manager • Vogel Food Group",
-      "msg": "Ngorderin Bot memudahkan saya memantau stok di beberapa cabang sekaligus. Nggak perlu login ke sistem satu per satu lagi!"
-    },
-    {
-      "id": 5,
-      "delay": 0.4,
-      "src": "/users/lena.jpg",
-      "name": "Lena Hoffmann",
-      "dept": "Finance Officer • Hoffmann Bäckerei",
-      "msg": "Setiap Senin pagi saya langsung menerima laporan stok mingguan di WhatsApp. Sangat membantu menghemat waktu untuk pekerjaan lain."
-    },
-    {
-      "id": 6,
-      "delay": 0.5,
-      "src": "/users/jonas.jpg",
-      "name": "Jonas Weber",
-      "dept": "Store Owner • Weber Electronics",
-      "msg": "Tim saya bisa fokus jualan karena semua pencatatan stok sudah otomatis. Produktivitas naik, stres turun!"
-    },
-    {
-      "id": 7,
-      "delay": 0.6,
-      "src": "/users/clara.jpg",
-      "name": "Clara Meinhardt",
-      "dept": "Product Designer • Meinhardt Studio",
-      "msg": "UI-nya sederhana tapi fungsional banget! Setup-nya cuma butuh 10 menit dan notifikasi WhatsApp-nya selalu akurat."
-    },
-    {
-      "id": 8,
-      "delay": 0.7,
-      "src": "/users/braun.jpg",
-      "name": "Niklas Braun",
-      "dept": "Operations Lead • Braun Supplies",
-      "msg": "Sekarang saya bisa pantau stok dan penjualan langsung dari HP. Laporan harian otomatis dikirim tiap sore ke WhatsApp, simpel dan cepat!"
+      "image": "/project-placeholders/project3.jpg",
+      "title": "Project Gamma",
+      "description": "A data visualization tool created with D3.js, showcasing interactive charts and real-time data updates.",
+      "githubLink": "https://github.com/yourusername/project-gamma",
+      "websiteLink": "https://project-gamma.vercel.app"
     }
   ]
 }
