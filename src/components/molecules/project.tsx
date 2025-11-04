@@ -6,7 +6,7 @@ import projects from "@/data/projects.json";
 export function Project() {
   return (
     <section
-      className="min-h-screen py-35 px-5 flex flex-col gap-15 items-center"
+      className="min-h-screen pt-40 pb-20 px-5 flex flex-col gap-15 items-center -scroll-mt-10"
       id={project.id}
     >
       <div className="flex flex-col gap-5 max-w-6xl items-center text-center">
@@ -19,7 +19,6 @@ export function Project() {
           <span className="h-2 w-2 rounded-full bg-primary/80 animate-pulse" />
           {project.id}
         </motion.span>
-
         <motion.h1
           initial={{ opacity: 0, translateY: "100%" }}
           whileInView={{ opacity: 1, translateY: 0 }}
