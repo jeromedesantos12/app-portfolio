@@ -42,7 +42,10 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
         <Link
           href={app.path}
           className="font-bold flex gap-2 items-center justify-center"
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleHashClick(e, app.path);
+          }}
         >
           <Code className="duration-300" />
           <p className="font-mono duration-300">{app.title}</p>

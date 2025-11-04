@@ -10,6 +10,16 @@ interface MenuProps {
 }
 
 export function Menu({ isActive }: MenuProps) {
+  const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (path.startsWith('#')) {
+      e.preventDefault();
+      const element = document.querySelector(path);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <header
       className={cn(
@@ -20,16 +30,23 @@ export function Menu({ isActive }: MenuProps) {
       <ul className="md:hidden flex flex-col gap-2 text-sm w-full">
         {menus.map((menu) => (
           <Link
-            href={`${menu.path}`}
+            href={menu.path}
             key={menu.id}
             className="cursor-pointer hover:bg-accent duration-300 py-2"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleHashClick(e, menu.path);
+            }}
           >
             {menu.name}
           </Link>
         ))}
       </ul>
       <Link href={app.contact} target="_blank">
-        <Button className="cursor-pointer hover:scale-105 transition-transform flex gap-2 items-center justify-center">
+        <Button
+          className="cursor-pointer hover:scale-105 transition-transform flex gap-2 items-center justify-center"
+          onClick={(e) => e.stopPropagation()}
+        >
           <p>Contact Me</p>
           <ChevronRight />
         </Button>
