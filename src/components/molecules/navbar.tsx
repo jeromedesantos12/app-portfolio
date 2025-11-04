@@ -22,10 +22,10 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
     setMounted(true);
   }, []);
 
-  const handleHashClick = (
+  function handleHashClick(
     e: React.MouseEvent<HTMLAnchorElement>,
     path: string
-  ) => {
+  ) {
     if (path.startsWith("#")) {
       e.preventDefault();
       const element = document.querySelector(path);
@@ -33,14 +33,13 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-  };
+  }
 
   if (!mounted) return null;
   return (
     <header className="fixed top-0 w-full bg-background flex justify-center z-30">
       <div className="w-full max-w-7xl flex justify-between items-center p-4">
-        <Link
-          href={app.path}
+        <div
           className="font-bold flex gap-2 items-center justify-center"
           onClick={(e) => {
             e.stopPropagation();
@@ -49,7 +48,7 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
         >
           <Code className="duration-300" />
           <p className="font-mono duration-300">{app.title}</p>
-        </Link>
+        </div>
 
         <div className="md:hidden flex items-center gap-5">
           <div
@@ -70,8 +69,7 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
         </div>
         <ul className="md:flex gap-5 text-sm hidden">
           {menus.map((menu) => (
-            <Link
-              href={menu.path}
+            <div
               key={menu.id}
               className="cursor-pointer border-b-3 border-transparent hover:border-primary px-5 duration-300"
               onClick={(e) => {
@@ -80,7 +78,7 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
               }}
             >
               {menu.name}
-            </Link>
+            </div>
           ))}
         </ul>
         <div className="md:flex gap-4 items-center justify-center hidden">

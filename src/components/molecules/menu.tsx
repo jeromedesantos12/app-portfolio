@@ -10,12 +10,15 @@ interface MenuProps {
 }
 
 export function Menu({ isActive }: MenuProps) {
-  const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
-    if (path.startsWith('#')) {
+  const handleHashClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    path: string
+  ) => {
+    if (path.startsWith("#")) {
       e.preventDefault();
       const element = document.querySelector(path);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
@@ -29,8 +32,7 @@ export function Menu({ isActive }: MenuProps) {
     >
       <ul className="md:hidden flex flex-col gap-2 text-sm w-full">
         {menus.map((menu) => (
-          <Link
-            href={menu.path}
+          <div
             key={menu.id}
             className="cursor-pointer hover:bg-accent duration-300 py-2"
             onClick={(e) => {
@@ -39,7 +41,7 @@ export function Menu({ isActive }: MenuProps) {
             }}
           >
             {menu.name}
-          </Link>
+          </div>
         ))}
       </ul>
       <Link href={app.contact} target="_blank">
