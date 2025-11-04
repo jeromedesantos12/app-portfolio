@@ -25,7 +25,7 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
   if (!mounted) return null;
   return (
     <header className="fixed top-0 w-full bg-background flex justify-center z-30">
-      <div className="w-full max-w-7xl flex justify-between items-center p-4" style={{ border: '2px solid blue' }}>
+      <div className="w-full max-w-7xl flex justify-between items-center p-4">
         <Link
           href={app.path}
           className="font-bold flex gap-2 items-center justify-center"
