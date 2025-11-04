@@ -4,16 +4,14 @@ import { cn } from "@/lib/utils";
 import menus from "@/data/menus.json";
 import app from "@/data/app.json";
 import Link from "next/link";
+import { type MouseEvent } from "react";
 
 interface MenuProps {
   isActive: boolean;
 }
 
 export function Menu({ isActive }: MenuProps) {
-  const handleHashClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    path: string
-  ) => {
+  const handleHashClick = (e: MouseEvent<HTMLAnchorElement>, path: string) => {
     if (path.startsWith("#")) {
       e.preventDefault();
       const element = document.querySelector(path);
