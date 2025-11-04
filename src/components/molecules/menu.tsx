@@ -20,7 +20,7 @@ export function Menu({ isActive }: MenuProps) {
       <ul className="md:hidden flex flex-col gap-2 text-sm w-full">
         {menus.map((menu) => (
           <Link
-            href={`${menu.path}`}
+            href={menu.path}
             key={menu.id}
             className="cursor-pointer hover:bg-accent duration-300 py-2"
           >

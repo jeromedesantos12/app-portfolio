@@ -54,7 +54,7 @@ export function Navbar({ isActive, toggleMenu }: NavbarProps) {
         <ul className="md:flex gap-5 text-sm hidden">
           {menus.map((menu) => (
             <Link
-              href={`${menu.path}`}
+              href={menu.path}
               key={menu.id}
               className="cursor-pointer border-b-3 border-transparent hover:border-primary px-5 duration-300"
             >
