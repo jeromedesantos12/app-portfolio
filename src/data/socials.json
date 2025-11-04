@@ -1,21 +1,21 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "youtube",
     "href": "https://youtube.com/@kursusTUTOR"
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "instagram",
     "href": "https://instagram.com/jeremy001_"
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "linkedin",
     "href": "https://linkedin.com/in/jeromedesantos12"
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "github",
     "href": "https://github.com/jeromedesantos12"
   }

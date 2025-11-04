@@ -1,21 +1,17 @@
-import { LogoLoop } from "@/components/ui/logo-loop";
-import { DynamicSiIcon } from "./icon-si";
-import stacks from "@/data/stacks.json";
+import { LogoItem, LogoLoop } from "@/components/ui/logo-loop";
 
-const techMapped = stacks.map((stack) => ({
-  node: <DynamicSiIcon name={stack.name} />,
-  title: stack.title,
-  href: stack.href,
-}));
+interface StackProps {
+  logoMapped: LogoItem[];
+}
 
-export function Tech() {
+export function Stacks({ logoMapped }: StackProps) {
   return (
     <div
       className="flex justify-center"
       style={{ position: "relative", overflow: "hidden" }}
     >
       <LogoLoop
-        logos={techMapped}
+        logos={logoMapped}
         speed={30}
         direction="right"
         logoHeight={48}

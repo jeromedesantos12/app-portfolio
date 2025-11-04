@@ -2,9 +2,14 @@ import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import menus from "@/data/menus.json";
+import app from "@/data/app.json";
 import Link from "next/link";
 
-export function Menu({ isActive }: { isActive: boolean }) {
+interface MenuProps {
+  isActive: boolean;
+}
+
+export function Menu({ isActive }: MenuProps) {
   return (
     <header
       className={cn(
@@ -23,10 +28,12 @@ export function Menu({ isActive }: { isActive: boolean }) {
           </Link>
         ))}
       </ul>
-      <Button className="w-full font-bold flex gap-1 items-center justify-center cursor-pointer">
-        <p>Try it now</p>
-        <ChevronRight />
-      </Button>
+      <Link href={app.contact} target="_blank">
+        <Button className="cursor-pointer hover:scale-105 transition-transform flex gap-2 items-center justify-center">
+          <p>Contact Me</p>
+          <ChevronRight />
+        </Button>
+      </Link>
     </header>
   );
 }

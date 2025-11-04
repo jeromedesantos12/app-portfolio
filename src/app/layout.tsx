@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
+import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import app from "@/data/app.json";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,9 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "jeremy.dev",
-  description:
-    "Tingkatkan efisiensi bisnismu dengan automasi stok, notifikasi, dan laporan real-time — langsung dari Telegram.",
+  title: app.title,
+  description: app.description,
   icons: {
     icon: [
       { media: "(prefers-color-scheme: light)", url: "/icons/icon-light.png" },

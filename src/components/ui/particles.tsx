@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { type FC, useEffect, useRef } from "react";
 import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
 
 interface ParticlesProps {
@@ -90,7 +90,7 @@ const fragment = /* glsl */ `
   }
 `;
 
-export const Particles: React.FC<ParticlesProps> = ({
+export const Particles: FC<ParticlesProps> = ({
   particleCount = 200,
   particleSpread = 10,
   speed = 0.1,

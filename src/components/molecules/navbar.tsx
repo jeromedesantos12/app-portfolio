@@ -8,13 +8,12 @@ import menus from "@/data/menus.json";
 import app from "@/data/app.json";
 import Link from "next/link";
 
-export function Navbar({
-  isActive,
-  toggleMenu,
-}: {
+interface NavbarProps {
   isActive: boolean;
   toggleMenu: () => void;
-}) {
+}
+
+export function Navbar({ isActive, toggleMenu }: NavbarProps) {
   const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const currentTheme = theme === "system" ? systemTheme : theme;
@@ -73,7 +72,7 @@ export function Navbar({
           </Button>
           <Link href={app.contact} target="_blank">
             <Button className="cursor-pointer hover:scale-105 transition-transform flex gap-2 items-center justify-center">
-              <p>Contact Us</p>
+              <p>Contact Me</p>
               <ChevronRight />
             </Button>
           </Link>

@@ -29,7 +29,7 @@ export function Hero() {
           initial={{ opacity: 0, translateX: "-100%" }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0 }}
           className="relative w-full md:w-[400px] h-64 sm:h-80 md:h-96"
         >
           <Image

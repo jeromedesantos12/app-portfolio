@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
-interface ProjectCardProps {
+interface ProjectsProps {
   id: number;
   image: string;
   title: string;
@@ -13,14 +13,14 @@ interface ProjectCardProps {
   websiteLink: string;
 }
 
-export function Card({
+export function Projects({
   id,
   image,
   title,
   description,
   githubLink,
   websiteLink,
-}: ProjectCardProps) {
+}: ProjectsProps) {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: "100%" }}

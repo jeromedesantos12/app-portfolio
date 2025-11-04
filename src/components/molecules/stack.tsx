@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
-import { Tech } from "@/components/atoms/tech";
+import { Stacks } from "@/components/atoms/stacks";
+import { DynamicSiIcon } from "@/components/ui/icon-si";
 import stack from "@/data/stack.json";
+import stacks from "@/data/stacks.json";
 
 export function Stack() {
+  const logoMapped = stacks.map((stack) => ({
+    node: <DynamicSiIcon name={stack.name} />,
+    title: stack.title,
+    href: stack.href,
+  }));
+
   return (
     <section
       id={stack.id}
@@ -53,7 +61,7 @@ export function Stack() {
         transition={{ duration: 0.5 }}
         className="w-full max-w-6xl rounded-2xl border border-border/60 bg-gradient-to-r from-background via-background/70 to-background p-4 sm:p-6 backdrop-blur shadow-[0_10px_30px_-10px_rgba(0,0,0,0.15)]"
       >
-        <Tech />
+        <Stacks logoMapped={logoMapped} />
       </motion.div>
     </section>
   );

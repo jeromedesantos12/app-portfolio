@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Card } from "@/components/atoms/card";
+import { Projects } from "@/components/atoms/projects";
 import project from "@/data/project.json";
 import projects from "@/data/projects.json";
 
@@ -29,12 +29,11 @@ export function Project() {
         >
           {project.title}
         </motion.h1>
-
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
+          transition={{ duration: 0.5 }}
           className="max-w-2xl text-sm sm:text-base text-muted-foreground"
         >
           {project.description}
@@ -42,7 +41,7 @@ export function Project() {
       </div>
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl px-4">
         {projects.map((project) => (
-          <Card key={project.id} {...project} />
+          <Projects key={project.id} {...project} />
         ))}
       </div>
     </section>

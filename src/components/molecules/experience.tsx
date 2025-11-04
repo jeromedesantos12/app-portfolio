@@ -1,7 +1,7 @@
-import experiences from "@/data/experiences.json";
-import experience from "@/data/experience.json";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Experiences } from "../atoms/experiences";
+import experience from "@/data/experience.json";
+import experiences from "@/data/experiences.json";
 
 export default function Experience() {
   return (
@@ -17,7 +17,6 @@ export default function Experience() {
             <span className="h-2 w-2 rounded-full bg-primary/80 animate-pulse" />
             {experience.id}
           </motion.span>
-
           <motion.h1
             initial={{ opacity: 0, translateY: "100%" }}
             whileInView={{ opacity: 1, translateY: 0 }}
@@ -39,35 +38,8 @@ export default function Experience() {
           </motion.p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, translateY: "50px" }}
-              whileInView={{ opacity: 1, translateY: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true, amount: 0.5 }}
-              className="bg-card rounded-lg shadow-lg p-6 flex flex-col"
-            >
-              <div className="flex items-start gap-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                  <Image
-                    src={exp.logo}
-                    alt={`${exp.company} logo`}
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold mb-1">{exp.job}</h3>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    {exp.company} | {exp.date}
-                  </p>
-                </div>
-              </div>
-              <div className="mt-4">
-                <p className="text-sm">{exp.description}</p>
-              </div>
-            </motion.div>
+          {experiences.map((exp) => (
+            <Experiences key={exp.id} {...exp} />
           ))}
         </div>
       </div>
