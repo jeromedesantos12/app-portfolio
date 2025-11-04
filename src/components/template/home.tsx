@@ -15,14 +15,16 @@ export function Home() {
   const handleDiv = () => setIsActive(false);
 
   return (
-    <div onClick={handleDiv}>
+    <>
       <Navbar isActive={isActive} toggleMenu={toggleMenu} />
-      <Menu isActive={isActive} />
-      <Hero />
-      <Stack />
-      <Project />
-      <Experience />
-      <Footer />
-    </div>
+      <div onClick={handleDiv}>
+        <Menu isActive={isActive} />
+        <Hero />
+        <Stack />
+        <Project />
+        <Experience />
+        <Footer />
+      </div>
+    </>
   );
 }
