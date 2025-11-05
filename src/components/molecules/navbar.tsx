@@ -2,8 +2,8 @@
 
 import { ChevronRight, Code, Menu, Moon, Sun, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import menus from "@/data/menus.json";
 import app from "@/data/app.json";
 import Link from "next/link";
