@@ -83,7 +83,7 @@ export function Hero() {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            <Link href={app.cv} target="_blank">
+            <Link href={app.cv} download>
               <Button
                 variant="outline"
                 className="cursor-pointer flex gap-2 items-center justify-center px-6 py-3  shadow-md transform hover:-translate-y-1 transition-transform"
