@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { DynamicIcon } from "@/components/ui/icon";
+import { DynamicLuIcon } from "@/components/ui/icon-lu";
 import { motion } from "framer-motion";
-import { Suspense } from "react";
 import Link from "next/link";
-import dynamicIconImports from "lucide-react/dynamicIconImports";
 
 interface SocialsProps {
   id: number;
@@ -24,12 +22,7 @@ export function Socials({ id, name, href }: SocialsProps) {
           variant="secondary"
           className="rounded-full cursor-pointer p-5 transition-transform hover:scale-115"
         >
-          <Suspense>
-            <DynamicIcon
-              name={name as keyof typeof dynamicIconImports}
-              className="w-5 h-5"
-            />
-          </Suspense>
+          <DynamicLuIcon name={name} />
         </Button>
       </Link>
     </motion.div>

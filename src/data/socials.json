@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "name": "youtube",
+    "name": "LuYoutube",
     "href": "https://youtube.com/@kursusTUTOR"
   },
   {
     "id": 2,
-    "name": "instagram",
+    "name": "LuInstagram",
     "href": "https://instagram.com/jeremy001_"
   },
   {
     "id": 3,
-    "name": "linkedin",
+    "name": "LuLinkedin",
     "href": "https://linkedin.com/in/jeromedesantos12"
   },
   {
     "id": 4,
-    "name": "github",
+    "name": "LuGithub",
     "href": "https://github.com/jeromedesantos12"
   }
 ]

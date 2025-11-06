@@ -5,7 +5,7 @@ import app from "@/data/app.json";
 import hero from "@/data/hero.json";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { LuChevronRight } from "react-icons/lu";
 
 export function Hero() {
   return (
@@ -80,7 +80,7 @@ export function Hero() {
             <Link href={app.contact} target="_blank">
               <Button className="cursor-pointer flex gap-2 items-center justify-center px-6 py-3 shadow-md transform hover:-translate-y-1 transition-transform p-4">
                 <p>Contact Me</p>
-                <ArrowRight className="w-5 h-5" />
+                <LuChevronRight className="w-5 h-5" />
               </Button>
             </Link>
             <a href={app.cv} download>
